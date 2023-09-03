@@ -1,5 +1,7 @@
 # BankingApplication-using-Python
 This is a simple Banking Appliation created using Python with interactive UI
+
+
 ---NOTE---
 
 For successful execution and operation of the application,
