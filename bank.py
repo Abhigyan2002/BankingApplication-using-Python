@@ -202,9 +202,9 @@ def bankCallFunc2():
         label.grid(row=0,columnspan=3)
         otpEntry=Entry(frame,width=45)
         otpEntry.grid(row=1,columnspan=3)
-        server=smtplib.SMTP('smtp.gmail.com',587)
+        server=smtplib.SMTP('',)#start your server and provide port
         server.starttls()
-        password='hxdjcjrabhqntnkz'
+        password=''#type your twilio password
         server.login("bankofpython2022@gmail.com",password)
         otp=random.randint(100000,999999)
         msg='Hello, Your OTP is '+str(otp)
@@ -292,7 +292,7 @@ def sendMoney():
         else:
             server=smtplib.SMTP('smtp.gmail.com',587)
             server.starttls()
-            password='hxdjcjrabhqntnkz'
+            password=''#provide password
             server.login("bankofpython2022@gmail.com",password)
             otp=random.randint(100000,999999)
             msg='OTP for funds transfer of Rs. '+ramt.get()+' is '+str(otp)
@@ -611,7 +611,7 @@ def resendOtp():
     global receiver,otp,phNo,ramt
     server=smtplib.SMTP('smtp.gmail.com',587)
     server.starttls()
-    password='hxdjcjrabhqntnkz'
+    password=''#provide password
     server.login("bankofpython2022@gmail.com",password)
     otp=random.randint(100000,999999)
     if ch!=2:
